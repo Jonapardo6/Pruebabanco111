@@ -1,19 +1,14 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 import java.util.Scanner;
-
 
 public class Main {
 
-
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
 
-// Crear una Cuenta de Ahorros
+        // Crear una Cuenta de Ahorros
         System.out.println("Ingrese los datos para la Cuenta de Ahorros:");
         System.out.print("Número de Cuenta: ");
-        String numeroCuentaAhorros = Scanner.nextLine();
+        String numeroCuentaAhorros = scanner.nextLine();  // Arreglado, usando scanner.nextLine() para capturar la entrada
         System.out.print("Propietario: ");
         String propietarioAhorros = scanner.nextLine();
         System.out.print("Saldo Inicial: ");
@@ -49,6 +44,6 @@ public class Main {
         cuentaCorriente.extractoMensual();
         cuentaCorriente.imprimir();
 
+        scanner.close();  // Cerramos el scanner al final
     }
 }
-
